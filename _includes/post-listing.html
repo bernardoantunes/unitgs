@@ -1,0 +1,13 @@
+<h1>Index</h1>
+
+<ul>{% for post in posts %}
+    <li><a href="#{{ post.name }}">{{ post.type }} {{ post.name }} ({{ post.user-level }})</a></li>
+{% endfor %}</ul>
+
+<h1>Reference</h1>
+
+{% for post in posts %}
+<article id="{{ post.name }}" class="documentation-item">
+    {{ post.content }}
+</article>
+{% endfor %}

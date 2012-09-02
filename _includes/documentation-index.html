@@ -1,0 +1,22 @@
+<h1>Index</h1>
+
+<h2>User</h2>
+<p class="byline">Just show me how to use the grid without going into its internals.</p>
+
+<ul>{% for post in posts %}{% if post.user-level == 'User' %}
+    <li><a href="{{ post.url }}">{{ post.type }} {{ post.name }}</a></li>
+{% endif %}{% endfor %}</ul>
+
+<h2>Power user</h2>
+<p class="byline">I want a better understanding about the grid internals, I want to customize the grid settings to my needs and take advantage of some internal functionality.</p>
+
+<ul>{% for post in posts %}{% if post.user-level == 'Power user' %}
+    <li><a href="{{ post.url }}">{{ post.type }} {{ post.name }}</a></li>
+{% endif %}{% endfor %}</ul>
+
+<h2>Developer</h2>
+<p class="byline">Lets get dirty into the code, understand, change and extend the grid functionalities.</p>
+
+<ul>{% for post in posts %}{% if post.user-level == 'Developer' %}
+    <li><a href="{{ post.url }}">{{ post.type }} {{ post.name }}</a></li>
+{% endif %}{% endfor %}</ul>

@@ -1,0 +1,1239 @@
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+/* line 17, E:/Bernardo/Documents/GitHub/unitgs/_sass/_Boilerplate-before.scss */
+html,
+button,
+input,
+select,
+textarea {
+  color: #222;
+}
+
+/* line 21, E:/Bernardo/Documents/GitHub/unitgs/_sass/_Boilerplate-before.scss */
+body {
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/* line 26, E:/Bernardo/Documents/GitHub/unitgs/_sass/_Boilerplate-before.scss */
+a {
+  color: #00e;
+}
+
+/* line 30, E:/Bernardo/Documents/GitHub/unitgs/_sass/_Boilerplate-before.scss */
+a:visited {
+  color: #551a8b;
+}
+
+/* line 34, E:/Bernardo/Documents/GitHub/unitgs/_sass/_Boilerplate-before.scss */
+a:hover {
+  color: #06e;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate.
+ * Customize the background color to match your design.
+ */
+/* line 44, E:/Bernardo/Documents/GitHub/unitgs/_sass/_Boilerplate-before.scss */
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/* line 49, E:/Bernardo/Documents/GitHub/unitgs/_sass/_Boilerplate-before.scss */
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+/* line 58, E:/Bernardo/Documents/GitHub/unitgs/_sass/_Boilerplate-before.scss */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+/* line 71, E:/Bernardo/Documents/GitHub/unitgs/_sass/_Boilerplate-before.scss */
+img {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+/* line 79, E:/Bernardo/Documents/GitHub/unitgs/_sass/_Boilerplate-before.scss */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+/* line 89, E:/Bernardo/Documents/GitHub/unitgs/_sass/_Boilerplate-before.scss */
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+/* line 97, E:/Bernardo/Documents/GitHub/unitgs/_sass/_Boilerplate-before.scss */
+.chromeframe {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/*
+*
+*  Margin, padding, and border resets
+*  except for form elements
+*
+*/
+/* ######################################################### */
+/*                         My Settings                       */
+/* line 419, E:/Bernardo/Documents/GitHub/unitgs/_sass/_UnitGS.scss */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, a, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, nav, section, menu, time, mark, audio, video, canvas {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* line 431, E:/Bernardo/Documents/GitHub/unitgs/_sass/_UnitGS.scss */
+body {
+  font-size: 1em;
+  line-height: 1.6em;
+}
+
+/* line 53, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+html {
+  height: 100%;
+}
+
+/* line 58, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+body {
+  background-color: #333333;
+  font-family: 'Open Sans',sans-serif;
+  font-weight: 400;
+  color: #ececec;
+  min-height: 100%;
+}
+
+/* line 76, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+a, a:visited {
+  text-decoration: none;
+  color: #79a7ec;
+}
+
+/* line 81, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+a:hover {
+  color: #79a7ec;
+}
+
+/* line 85, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+h1, h2, h3, p.intro {
+  text-rendering: optimizeLegibility;
+  font-weight: 800;
+}
+
+/* line 91, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+h1 {
+  font-size: 1.6em;
+  line-height: 2;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+/* line 92, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+h2 {
+  font-size: 1.2em;
+  line-height: 2.667;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0.667em;
+  margin-bottom: 0.667em;
+}
+
+/* line 93, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+h3 {
+  font-size: 1.2em;
+  line-height: 2.667;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0.667em;
+  margin-bottom: 0.667em;
+}
+
+/* line 95, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+p {
+  font-size: 1em;
+  line-height: 1.6;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 1.6em;
+}
+
+/* line 100, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+::-webkit-selection {
+  background: #777;
+  color: white;
+}
+
+/* line 100, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+::-moz-selection {
+  background: #777;
+  color: white;
+}
+
+/* line 100, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+::-o-selection {
+  background: #777;
+  color: white;
+}
+
+/* line 100, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+::selection {
+  background: #777;
+  color: white;
+}
+
+/* ######################################################### */
+/*                       Unit Grid System                     */
+/* line 112, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+img {
+  max-width: 100%;
+}
+
+/* line 116, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+.highlight {
+  font-size: 1em;
+  line-height: 1.6;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 1.6em;
+  margin-bottom: 1.6em;
+}
+
+/* line 123, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+#mainnav {
+  font-size: 1em;
+  line-height: 1.6;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  width: 96%;
+  margin-left: 2%;
+  margin-right: 2%;
+  float: left;
+  padding-left: 0.8em;
+  padding-right: 0.8em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  clear: both;
+  display: inline;
+}
+/* line 126, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+#mainnav a:hover {
+  color: #79a7ec;
+  background-color: #444;
+  transition: color 1s;
+}
+/* line 132, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+#mainnav a.current {
+  -webkit-border-radius: utils-units-convert-to-ems(5px);
+  -moz-border-radius: utils-units-convert-to-ems(5px);
+  -ms-border-radius: utils-units-convert-to-ems(5px);
+  -o-border-radius: utils-units-convert-to-ems(5px);
+  border-radius: utils-units-convert-to-ems(5px);
+  background: #ec79a7;
+  color: #eee;
+}
+/* line 138, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+#mainnav a {
+  font-size: 0.9em;
+  line-height: 1.778;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: 0%;
+  float: left;
+  padding-left: 0;
+  padding-right: 0;
+  clear: both;
+  display: block;
+  overflow: hidden;
+  *zoom: 1;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #eee;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+/* line 158, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+#unitgs-logo {
+  height: 100%;
+  display: inline-block;
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 163, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+#unitgs-logo .first-color, #unitgs-logo .second-color, #unitgs-logo .third-color, #unitgs-logo .fourth-color {
+  vertical-align: middle;
+  float: left;
+  width: 0.25em;
+  height: 0.720em;
+  margin-left: 0.125em;
+}
+/* line 170, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+#unitgs-logo .first-color {
+  margin-left: 0em;
+  background-color: #ec79a7;
+}
+/* line 171, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+#unitgs-logo .second-color {
+  background-color: #ecec79;
+}
+/* line 172, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+#unitgs-logo .third-color {
+  background-color: #90ec79;
+}
+/* line 173, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+#unitgs-logo .fourth-color {
+  background-color: #79a7ec;
+}
+
+/* line 176, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+#bigTitle {
+  font-size: 1.6em;
+  line-height: 2;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  width: 96%;
+  margin-left: 2%;
+  margin-right: 2%;
+  float: left;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  clear: both;
+  display: inline;
+  text-align: center;
+}
+
+/*
+Solution in css to keep the aspect ratio in a fluid design.
+http://ansciath.tumblr.com/post/7347495869/css-aspect-ratio
+*/
+/* line 185, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+#video-container {
+  font-size: 1em;
+  line-height: 1.6;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 1.6em;
+  margin-bottom: 0;
+  width: 96%;
+  margin-left: 2%;
+  margin-right: 2%;
+  float: left;
+  padding-left: 0.8em;
+  padding-right: 0.8em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  clear: both;
+  display: inline;
+  display: inline-block;
+  position: relative;
+}
+
+/* line 190, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+#aspect-ratio-enforcer {
+  margin-top: 56.25%;
+  /* 4:3 aspect ratio */
+}
+
+/* line 193, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+#video {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0.8em;
+  right: 0.8em;
+}
+
+/* line 203, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+#page-content {
+  font-size: 1em;
+  line-height: 1.6;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  width: 96%;
+  margin-left: 2%;
+  margin-right: 2%;
+  float: left;
+  padding-left: 0.8em;
+  padding-right: 0.8em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  clear: both;
+  display: inline;
+}
+
+/* line 207, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+.startup-step {
+  font-size: 1em;
+  line-height: 1.6;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  width: 96%;
+  margin-left: 2%;
+  margin-right: 2%;
+  float: left;
+  padding-left: 0.8em;
+  padding-right: 0.8em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  clear: both;
+  display: inline;
+}
+
+/* line 209, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+#setup-your-base-font, #start-mobile {
+  font-size: 1em;
+  line-height: 1.6;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  height: 9.6em;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: 0%;
+  float: left;
+  padding-left: 0;
+  padding-right: 0;
+  clear: both;
+  display: block;
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 211, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+#setup-your-base-font > div, #start-mobile > div {
+  height: 100%;
+  width: 20%;
+  float: left;
+}
+/* line 212, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+#setup-your-base-font > div:first-child, #start-mobile > div:first-child {
+  width: 40%;
+}
+/* line 213, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+#setup-your-base-font > div:last-child, #start-mobile > div:last-child {
+  width: 40%;
+}
+
+/* line 216, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+#devide-verticaly, #set-inactive-columns, #set-the-gutters {
+  font-size: 1em;
+  line-height: 1.6;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  height: 9.6em;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: 0%;
+  float: left;
+  padding-left: 0;
+  padding-right: 0;
+  clear: both;
+  display: block;
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 218, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+#devide-verticaly > div, #set-inactive-columns > div, #set-the-gutters > div {
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 100%;
+  width: 10%;
+  float: left;
+  border-right: thin dashed #79a7ec;
+}
+/* line 233, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+#devide-verticaly > div:last-child, #set-inactive-columns > div:last-child, #set-the-gutters > div:last-child {
+  border-right: none;
+}
+/* line 235, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+#devide-verticaly .inactive, #set-inactive-columns .inactive, #set-the-gutters .inactive {
+  background-color: #1a1c1d;
+}
+
+/* line 241, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+#define-vertical-rythm {
+  font-size: 1em;
+  line-height: 1.6;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  height: 9.6em;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: 0%;
+  float: left;
+  padding-left: 0;
+  padding-right: 0;
+  clear: both;
+  display: block;
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 243, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+#define-vertical-rythm > div {
+  font-size: 1em;
+  line-height: 1.6;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  height: 1.6em;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: 0%;
+  float: left;
+  padding-left: 0;
+  padding-right: 0;
+  clear: both;
+  display: block;
+  overflow: hidden;
+  *zoom: 1;
+  border-bottom: thin dashed #79a7ec;
+  text-align: center;
+}
+/* line 250, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+#define-vertical-rythm > div:last-child {
+  border-bottom: none;
+}
+
+/* line 254, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+#set-the-gutters > div > div {
+  height: 100%;
+  width: 0.5em;
+  background-color: #ecec79;
+}
+/* line 258, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+#set-the-gutters > div > div:first-child {
+  float: left;
+}
+/* line 259, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+#set-the-gutters > div > div:last-child {
+  float: right;
+}
+
+/* line 263, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+#your-sketches {
+  font-size: 1em;
+  line-height: 1.6;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  height: 12.8em;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: 0%;
+  float: left;
+  padding-left: 0;
+  padding-right: 0;
+  clear: both;
+  display: block;
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 267, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+#your-sketches #sketch-320,
+#your-sketches #sketch-480,
+#your-sketches #sketch-960 {
+  float: left;
+  margin: 0 2%;
+  height: 100%;
+}
+/* line 273, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+#your-sketches #sketch-320-title, #your-sketches #sketch-480-title, #your-sketches #sketch-960-title {
+  height: 15%;
+  width: 100%;
+  text-align: center;
+  vertical-align: middle;
+}
+/* line 279, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+#your-sketches #sketch-320-layout, #your-sketches #sketch-480-layout, #your-sketches #sketch-960-layout {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 85%;
+  width: 100%;
+  border: medium solid #595959;
+}
+/* line 295, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+#your-sketches .sketch-header,
+#your-sketches .sketch-nav,
+#your-sketches .sketch-section-A,
+#your-sketches .sketch-section-B,
+#your-sketches .sketch-footer {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  border: thin solid #79a7ec;
+  width: 95%;
+  float: left;
+  text-align: center;
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 309, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+#your-sketches #sketch-320 {
+  width: 16%;
+}
+/* line 315, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+#your-sketches #sketch-320 .sketch-header,
+#your-sketches #sketch-320 .sketch-nav,
+#your-sketches #sketch-320 .sketch-section-A,
+#your-sketches #sketch-320 .sketch-section-B,
+#your-sketches #sketch-320 .sketch-footer {
+  margin: 2% 5%;
+  width: 90%;
+  height: 16%;
+}
+/* line 321, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+#your-sketches #sketch-480 {
+  width: 24%;
+}
+/* line 325, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+#your-sketches #sketch-480 .sketch-header,
+#your-sketches #sketch-480 .sketch-nav,
+#your-sketches #sketch-480 .sketch-footer {
+  margin: 2% 5%;
+  width: 90%;
+  height: 16%;
+}
+/* line 331, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+#your-sketches #sketch-480 .sketch-section-A,
+#your-sketches #sketch-480 .sketch-section-B {
+  margin: 2% 5%;
+  width: 42.5%;
+  height: 16%;
+}
+/* line 336, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+#your-sketches #sketch-480 .sketch-section-B {
+  margin-left: 0;
+}
+/* line 340, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+#your-sketches #sketch-960 {
+  width: 48%;
+}
+/* line 343, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+#your-sketches #sketch-960 .sketch-header,
+#your-sketches #sketch-960 .sketch-nav {
+  margin: 1.5% 5%;
+  width: 42.5%;
+  height: 16%;
+}
+/* line 349, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+#your-sketches #sketch-960 .sketch-section-A,
+#your-sketches #sketch-960 .sketch-section-B {
+  margin: 1.5% 5%;
+  width: 42.5%;
+  height: 36%;
+}
+/* line 354, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+#your-sketches #sketch-960 .sketch-section-B, #your-sketches #sketch-960 .sketch-nav {
+  margin-left: 0;
+}
+/* line 357, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+#your-sketches #sketch-960 .sketch-footer {
+  margin: 1.5% 5%;
+  width: 90%;
+  height: 16%;
+}
+
+/* line 365, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+#debug-layout, #debug-responsive-layout {
+  font-size: 1em;
+  line-height: 1.6;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  height: 9.6em;
+  width: 33.333%;
+  margin-left: 33.333%;
+  margin-right: 33.333%;
+  float: left;
+  padding-left: 0.8em;
+  padding-right: 0.8em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  clear: both;
+  display: inline;
+}
+/* line 368, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+#debug-layout > div, #debug-responsive-layout > div {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 96%;
+  height: 1.5em;
+  margin: 0.25em 2%;
+  float: left;
+  text-align: center;
+  color: #333333;
+}
+/* line 383, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+#debug-layout .sketch-header, #debug-responsive-layout .sketch-header {
+  background-color: #ec79a7;
+}
+/* line 384, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+#debug-layout .sketch-nav, #debug-responsive-layout .sketch-nav {
+  background-color: #eca779;
+}
+/* line 385, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+#debug-layout .sketch-section-A, #debug-responsive-layout .sketch-section-A {
+  background-color: #ecec79;
+}
+/* line 386, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+#debug-layout .sketch-section-B, #debug-responsive-layout .sketch-section-B {
+  background-color: #90ec79;
+}
+/* line 387, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+#debug-layout .sketch-footer, #debug-responsive-layout .sketch-footer {
+  background-color: #79a7ec;
+}
+
+/* line 391, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+#debug-responsive-layout .sketch-section-A, #debug-responsive-layout .sketch-section-B {
+  width: 46%;
+  height: 3.5em;
+}
+/* line 395, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+#debug-responsive-layout .sketch-section-A {
+  background-color: #d8d8d8;
+}
+/* line 396, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+#debug-responsive-layout .sketch-section-B {
+  background-color: #ececec;
+}
+
+/* line 399, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+#sidenote-layout {
+  font-size: 1em;
+  line-height: 1.6;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  height: 9.6em;
+  width: 33.333%;
+  margin-left: 33.333%;
+  margin-right: 33.333%;
+  float: left;
+  padding-left: 0.8em;
+  padding-right: 0.8em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  clear: both;
+  display: inline;
+  text-align: center;
+  color: #333333;
+}
+/* line 404, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+#sidenote-layout #article-A {
+  width: 100%;
+  height: 100%;
+  background-color: #eca779;
+}
+/* line 410, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+#sidenote-layout #sidenote {
+  width: 50%;
+  height: 50%;
+  float: right;
+  background-color: #ec79a7;
+}
+
+/* line 425, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+#easy-start-templates-snippets,
+#want-to-know-more,
+#inspiration-and-references,
+#videos,
+#nested-units,
+#contribute-to-the-project,
+#faqs,
+#sites-using-unitgs {
+  font-size: 1em;
+  line-height: 1.6;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  width: 96%;
+  margin-left: 2%;
+  margin-right: 2%;
+  float: left;
+  padding-left: 0.8em;
+  padding-right: 0.8em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  clear: both;
+  display: inline;
+}
+
+/* line 443, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+#layout-footer {
+  font-size: 1em;
+  line-height: 1.6;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  width: 96%;
+  margin-left: 2%;
+  margin-right: 2%;
+  float: left;
+  padding-left: 0.8em;
+  padding-right: 0.8em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  clear: both;
+  display: inline;
+}
+/* line 446, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+#layout-footer img {
+  height: 4.5em;
+  width: 4.5em;
+  background-color: #d8d8d8;
+  border-radius: 0.1875em 0.1875em 0.1875em 0.1875em;
+  transition: background-color 1s;
+  float: left;
+  margin-right: 0.5em;
+}
+/* line 452, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+#layout-footer img:hover {
+  background-color: #79a7ec;
+}
+/* line 459, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+#layout-footer p {
+  margin-bottom: 0;
+}
+/* line 460, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+#layout-footer a > p:last-child {
+  color: #ececec;
+}
+/* line 462, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+#layout-footer div {
+  font-size: 0.8em;
+  line-height: 2;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: 0%;
+  float: left;
+  padding-left: 0;
+  padding-right: 0;
+  clear: both;
+  display: block;
+  overflow: hidden;
+  *zoom: 1;
+  text-align: center;
+}
+
+/* line 468, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+.documentation-item {
+  font-size: 1em;
+  line-height: 1.6;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  width: 96%;
+  margin-left: 2%;
+  margin-right: 2%;
+  float: left;
+  padding-left: 0.8em;
+  padding-right: 0.8em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  clear: both;
+  display: inline;
+}
+/* line 471, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+.documentation-item h1 {
+  color: #ec79a7;
+}
+/* line 473, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+.documentation-item h3 {
+  color: #eca779;
+}
+/* line 475, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+.documentation-item #post-comments {
+  font-size: 1em;
+  line-height: 1.6;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 1.6em;
+  margin-bottom: 0;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: 0%;
+  float: left;
+  padding-left: 0;
+  padding-right: 0;
+  clear: both;
+  display: block;
+  overflow: hidden;
+  *zoom: 1;
+}
+
+/* @media screen and min-width: utils-units-convert-to-ems(480px) */
+@media screen and (min-width: 30em) {
+  /* line 497, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+  #bigTitle {
+    font-size: 1.6em;
+    line-height: 2;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 96%;
+    margin-left: 2%;
+    margin-right: 2%;
+    float: left;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    clear: both;
+    display: inline;
+  }
+}
+/* @media screen and (min-width: 600px) */
+/* @media screen and (min-width: 640px) */
+@media screen and (min-width: 640px) {
+  /* line 535, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+  #mainnav {
+    font-size: 1em;
+    line-height: 1.6;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 1.6em;
+    width: 96%;
+    margin-left: 2%;
+    margin-right: 2%;
+    float: left;
+    padding-left: 0.8em;
+    padding-right: 0.8em;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    clear: both;
+    display: inline;
+  }
+  /* line 538, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+  #mainnav a:hover {
+    background-color: transparent;
+  }
+  /* line 542, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+  #mainnav a.current:hover {
+    background: #ec79a7;
+  }
+  /* line 546, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+  #mainnav a {
+    font-size: 1em;
+    line-height: 1.6;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    display: inline;
+    margin: 0;
+    width: auto;
+    clear: none;
+  }
+}
+/* @media screen and (min-width: 720px) */
+/* @media screen and (min-width: 888px) */
+@media screen and (min-width: 960px) {
+  /* line 602, E:/Bernardo/Documents/GitHub/unitgs/_sass/_SiteUnitGS.scss */
+  #asDesigned {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+}
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+/*
+ * Image replacement
+ */
+/* line 9, E:/Bernardo/Documents/GitHub/unitgs/_sass/_Boilerplate-after.scss */
+.ir {
+  border: 0;
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent;
+  background-color: transparent;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+/* line 21, E:/Bernardo/Documents/GitHub/unitgs/_sass/_Boilerplate-after.scss */
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+/* line 30, E:/Bernardo/Documents/GitHub/unitgs/_sass/_Boilerplate-after.scss */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+/* line 47, E:/Bernardo/Documents/GitHub/unitgs/_sass/_Boilerplate-after.scss */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+/* line 60, E:/Bernardo/Documents/GitHub/unitgs/_sass/_Boilerplate-after.scss */
+.invisible {
+  visibility: hidden;
+}
+
+/**
+ * Clearfix helper
+ * Used to contain floats: h5bp.com/q
+ */
+/* line 70, E:/Bernardo/Documents/GitHub/unitgs/_sass/_Boilerplate-after.scss */
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+
+/* line 75, E:/Bernardo/Documents/GitHub/unitgs/_sass/_Boilerplate-after.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+/* line 84, E:/Bernardo/Documents/GitHub/unitgs/_sass/_Boilerplate-after.scss */
+.clearfix {
+  *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   Theses examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+@media print {
+  /* line 104, E:/Bernardo/Documents/GitHub/unitgs/_sass/_Boilerplate-after.scss */
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster: h5bp.com/s */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  /* line 112, E:/Bernardo/Documents/GitHub/unitgs/_sass/_Boilerplate-after.scss */
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  /* line 116, E:/Bernardo/Documents/GitHub/unitgs/_sass/_Boilerplate-after.scss */
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  /* line 120, E:/Bernardo/Documents/GitHub/unitgs/_sass/_Boilerplate-after.scss */
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links for images, or javascript/internal links
+   */
+  /* line 130, E:/Bernardo/Documents/GitHub/unitgs/_sass/_Boilerplate-after.scss */
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+
+  /* line 135, E:/Bernardo/Documents/GitHub/unitgs/_sass/_Boilerplate-after.scss */
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /* line 140, E:/Bernardo/Documents/GitHub/unitgs/_sass/_Boilerplate-after.scss */
+  thead {
+    display: table-header-group;
+    /* h5bp.com/t */
+  }
+
+  /* line 145, E:/Bernardo/Documents/GitHub/unitgs/_sass/_Boilerplate-after.scss */
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  /* line 149, E:/Bernardo/Documents/GitHub/unitgs/_sass/_Boilerplate-after.scss */
+  img {
+    max-width: 100% !important;
+  }
+
+  @page {
+    margin: 0.5cm;
+}
+
+  /* line 159, E:/Bernardo/Documents/GitHub/unitgs/_sass/_Boilerplate-after.scss */
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* line 165, E:/Bernardo/Documents/GitHub/unitgs/_sass/_Boilerplate-after.scss */
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}

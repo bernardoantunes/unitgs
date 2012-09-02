@@ -1,0 +1,19 @@
+<section class="startup-step">
+<h1>1. Setup the grid</h1>
+
+{% include startup/step-1-1.html %}
+{% include startup/step-1-2.html %}
+{% include startup/step-1-3.html %}
+{% include startup/step-1-4.html %}
+{% include startup/step-1-5.html %}
+{% include startup/step-1-6.html %}
+
+<p class="note">Note: If you like the default values, you don't have to set them. Just write:</p>
+{% highlight sass %}
+body {
+  @include init-grid();
+}
+{% endhighlight %}
+
+<div class="todo">TODO: Add o link to the documentation in the mixin.</div>
+</section>

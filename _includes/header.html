@@ -1,0 +1,14 @@
+        <header id="layout-header">
+          <h1 id="bigTitle">{% include unitgs-logo.html %}Unit Grid System</h1>
+        </header>
+
+        <nav id="mainnav">
+          {% for link in site.navigation %}
+            {% assign current = nil %}
+            {% if page.url == link.url or page.layout == link.layout or page.selectNavigationMenuItem == link.url %}
+              {% assign current = 'current' %}
+            {% endif %}
+
+              <a href="{{ link.url }}"{% if current != nil %} class="current"{% endif %}>{{ link.text }}</a>
+          {% endfor %}
+        </nav>

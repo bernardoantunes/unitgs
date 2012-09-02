@@ -1,0 +1,23 @@
+<section class="startup-step">
+<h1>3. Set your Typography, maintain your vertical rythm</h1>
+
+<p>The best grids also manage the vertical rythm. But maintaning the vertical rythm in an elastic and responsive design is hard, very hard... that is why the UnitGS gives you the mixin grid-line.</p>
+
+<p class="note">Note: You can do this at the same time that you do the rest of the declarations of styles.</p>
+      
+<p>TODO: Here I have separate it to better explain the concept.</p>
+
+<p>Start in the global declaration and change as you go through the media queries.</p>
+
+{% highlight sass %}
+h1 { @include grid-line(3); } //The font will be 3 times bigger than the base font.
+h2 { @include grid-line(2); } //The font will be 2 times bigger than the base font.
+{% endhighlight %}
+
+<p>The grid-line mixin will maintain your vertical rythm, it will adjust values like line-height, etc. as necessary to keep the design in sync.</p>
+
+<p>Even modular scales are very easy to use with the UnitGS.</p>
+
+<p class="tip">Tip: To get more information about modular-scales, check ... and ... from ... .</p>
+
+</section>

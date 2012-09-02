@@ -1,0 +1,123 @@
+<section id="nested-units">
+<h1> Nested Units (columns) - Entering the advanced</h1>
+
+<p>When you start wanting to create a nested grid structure in a elastic design, where all the values are set in ems, you start entering in the world of complex math, and it is in this moment that many designers decide to go for other routes that gives them more time for design instead of math.</p>
+
+<p>But it is in this point that the Unit Grid System really shines.</p>
+
+<h2>4 types of grid container types</h2>
+
+<p>none (default): It is a top level grid unit, it is not contained by other grid units and will contain content.</p>
+<p>The margins and the gutters will be set.</p>
+
+{% highlight sass %}
+@include grid-unit(); // It will set the $container-type to none.
+{% endhighlight %}
+
+<p>container: A grid unit that will contain other grid units but no content.</p>
+<p>The margins will be set but no gutters.</p>
+
+{% highlight sass %}
+@include grid-unit($width: 1/4, $container-type: container);
+{% endhighlight %}
+
+<p>contained: A grid-unit that exists contained inside a container grid unit and that will contain content.</p>
+<p>The gutters will be set but no margins.</p>
+
+{% highlight sass %}
+@include grid-unit($width: 1/4 1/2, $container-type: contained);
+{% endhighlight %}
+
+<p>When setting an contained grid-unit you have to inform the width of the parents containers and the last value is the width of the current grid-unit.</p>
+
+<p class="note">Note: The default calculation mode is relative wich means that in this case the grid unit will occupy 1/8 of the total active grid columns. You can change the mode of calculation to absolute if you prefer.</p>
+
+<p>both: In a deep nested grid, you will create grid-units that are contained and are also containers for others. In this case you just have to set the $container-type to both.</p>
+<p>No gutters and no margins.</p>
+
+{% highlight sass %}
+@include grid-unit($width: 1/4 1/2, $container-type: both);
+{% endhighlight %}
+
+<h2>Containers with different font-sizes</h2>
+
+<p>In the world of the ems, when you start messing with the font-size, you are messing with the relative scales of the world of ems. You could use rems, but they are still not supported by all browsers and we don't know if they will ever be.</p>
+
+<p>Lets use this example with a 16px font-size as the default browser font size:</p>
+<code>2em >  2em >   2em</code>
+<p>Will became respectively:</p>
+<code>32px > 64px > 128px</code>
+
+<p>If you would like to set the font-size to:</p>
+<code>32px > 16px  > 24px</code>
+<p>You would have to do set them as this:</p>
+<code>2em >  0.5em >  1.5em</code>
+
+<p>And this is just the beggining, because ALL the values are in ems, wich means that you need to calculate all the values of all the mesurements relative to the current ratio.</p>
+
+<p>You can see where it will lead your css calculations to... and it is not a pretty place.</p>
+
+<p>But don't worry, the Unit Grid takes care of this for you. :)</p>
+
+<p>Check this scenario:</p>
+
+{% highlight html %}
+<div id="col-A">A
+  <div id="col-B">B</div>
+  <div id="col-C">C
+    <div id="col-D">D</div>
+  </div>
+</div>
+{% endhighlight %}
+
+<p>And we want to set the font-size to:</p>
+
+{% highlight sass %}
+#col-A { font-size: 1.25em; }
+#col-B { font-size: 1.5em; }
+#col-C { font-size: 2em; }
+#col-D { font-size: 1em; }
+{% endhighlight %}
+
+<p>Based on the base font-size of 16px.</p>
+<p>But because of the nested layout, the sizes of the fonts and dimensions will not be as you would like them to be.</p>
+
+<p>To solve this complex and annoying problem, you use the grid in this way.</p>
+
+{% highlight sass %}
+#col-A { @include grid-unit($font-size: 1.25); }
+#col-B { @include grid-unit($font-size: 1.25 1.5); }
+#col-C { @include grid-unit($font-size: 1.25 2); }
+#col-D { @include grid-unit($font-size: 1.25 2 1); }
+{% endhighlight %}
+
+<p>And everything works as expected, you just need to give the Unit Grid the parent font sizes and the grid does the math for you. Not only to the font-sizes of the text but it also corrects all the dimension values of the grid-unit (line height, gutters, margins, paddings, etc.).</p>
+
+<h2>Can I have floating grid units in the content?</h2>
+
+<p>Yes, but you will need to know a litte about how are the grid inner workings.</p>
+
+<p>For example, to create this scenario:</p>
+
+<div id="sidenote-layout">
+  <div id="article-A">article<div id="sidenote">sidenote</div></div>
+</div>
+
+<p>You will need to:</p>
+
+{% highlight sass %}
+#article-A {
+	@include grid-unit($container-type: container);
+	> p { 
+		padding-left: utils-calculate-gutter-width-in-ems();
+		padding-right: utils-calculate-gutter-width-in-ems();
+	}
+}
+
+#sidenote {
+	@include grid-unit(1/2, $align: right, $container-type: contained);
+	margin-left: utils-calculate-gutter-width-in-ems();
+}
+{% endhighlight %}
+
+</section>

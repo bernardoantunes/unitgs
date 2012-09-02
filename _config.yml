@@ -1,0 +1,21 @@
+auto: false
+auto: true
+server: false
+lsi: false
+pygments: true
+permalink: /:title
+paginate: 10
+exclude: ["Rakefile", "LICENSE.txt", "CNAME"]
+title: UnitGS
+url: http://unit.gs
+github_user: bernardoantunes
+navigation:
+- text: Home
+  url: /index.html
+- text: Start here
+  url: /starthere/index.html
+- text: Documentation
+  url: /documentation/index.html
+  layout: post
+- text: Get involved
+  url: /getinvolved/index.html

@@ -1,0 +1,35 @@
+---
+layout: default
+selectNavigationMenuItem: /documentation/index.html
+---
+
+  <article class="documentation-item">
+    <div class="post-content">
+        {{ content }}
+    </div>
+
+    <div class="next-prev-nav">
+      {% if page.next.url %}
+        &laquo;&nbsp;<a href="{{ page.next.url }}" rel="next" title="{{ page.next.name }}">{{ page.previous.type }} {{ page.next.name }}</a>
+      {% endif %}
+    
+      {% if page.next.url %}
+        {% if page.previous.url %}
+          |
+        {% endif %}
+      {% endif %}
+      
+    
+      {% if page.previous.url %}
+        <a href="{{ page.previous.url }}" rel="previous" title="{{ page.previous.name }} {{ page.previous.user-level }}">{{ page.previous.type }} {{ page.previous.name }}</a>&nbsp;&raquo;
+      {% endif %}
+    
+      <br />
+    </div>
+  
+    {% unless page.no_comments %}
+    <div id="post-comments">
+      {% include comments.html %}
+    </div>
+    {% endunless %}
+  </article>

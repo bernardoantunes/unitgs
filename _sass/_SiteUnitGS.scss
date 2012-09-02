@@ -1,0 +1,681 @@
+﻿//To make big text
+//http://patorjk.com/software/taag/#p=display&h=0&v=0&f=Roman&t=960px
+
+/*
+*
+*  Margin, padding, and border resets
+*  except for form elements
+*
+*/
+
+//html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, a, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, nav, section, menu, time, mark, audio, video, canvas {
+//	margin: 0;
+//	padding: 0;
+//	border: 0;
+//}
+
+@import "compass/css3/border-radius"; //Nav menu.
+@import "compass/typography/lists/inline-block-list"; //Nav menu.
+@import "compass/typography/text/replacement"; //Footer icons.
+
+@import 'modular-scale';
+
+/* ######################################################### */
+/*                         My Settings                       */
+
+//Lets activate the debug mode. ;)
+$grid-debug: false;
+
+//Design colors
+$settings-colors-pink: 		rgb(236, 121, 167);
+$settings-colors-orange: 	rgb(236, 167, 121);
+$settings-colors-yellow: 	rgb(236, 236, 121);
+$settings-colors-green: 	rgb(144, 236, 121);
+$settings-colors-blue: 		rgb(121, 167, 236);
+$settings-colors-lightgray:	rgb(216, 216, 216);
+$settings-colors-darkgray:	rgb( 89,  89,  89);
+
+
+//Where I define my site settings.
+$settings-colors-verydarkgray: #1A1C1D;
+//$settings-colors-darkgray: #3f3e3d;
+$settings-colors-verylightgray: rgb(236, 236, 236);
+//$settings-colors-lightgray: rgb(123, 123, 123);
+$settings-colors-highlight: rgb(255, 255, 0);
+
+$settings-colors-links: $settings-colors-blue;
+
+//Defines the settings for the grid to work with.
+@include unitgs-set-grid-settings($font-size: 1.25, $line-height: 1.6);
+//This function should be applied to the body.
+@include unitgs-init-grid(0.8);
+
+html {
+	height: 100%;
+}
+
+//Lets set the grid.
+body{
+    //background-image: url('/img/Background.jpg');
+    //background-repeat: repeat;
+    background-color: #333333;
+	//font-family: Georgia, "Times New Roman", Times, serif;
+	font-family: 'Open Sans',sans-serif;
+	font-weight: 400;
+	color: $settings-colors-verylightgray;
+
+	min-height: 100%;
+}
+
+//Here I set the scale definitions.
+@function grid-modular-scale($multiple)
+{
+	@return modular-scale($multiple, 1 1.6, $golden $fourth);
+}
+
+a, a:visited {
+	text-decoration: none;
+	color: $settings-colors-links;
+}
+
+a:hover {
+	color: $settings-colors-links;
+}
+
+h1, h2, h3, p.intro { 
+	//font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	text-rendering: optimizeLegibility; 
+	font-weight: 800;
+}
+
+h1 { @include grid-line(grid-modular-scale(3), $margin-top: 1/2, $margin-bottom: 1/2, $fit-method: ceil); }
+h2 { @include grid-line(grid-modular-scale(1), $margin-top: 1/2, $margin-bottom: 1/2, $fit-method: ceil); }
+h3 { @include grid-line(grid-modular-scale(1), $margin-top: 1/2, $margin-bottom: 1/2, $fit-method: ceil); }
+
+p { @include grid-line(1, $margin-bottom: 1); }
+
+//Change the selection color.
+$text-selector-prefixes: ("-webkit-","-moz-", "-o-", "");
+@each $text-selector-prefix in $text-selector-prefixes {
+    ::#{$text-selector-prefix}selection {
+		background: #777;
+		color: white;
+
+    }
+}
+
+/* ######################################################### */
+/*                       Unit Grid System                     */
+
+//General page styles
+//To allow to shrink images in small devices.
+img {
+	max-width: 100%;
+}
+
+.highlight {
+	@include grid-line($margin-top: 1, $margin-bottom: 1);
+}
+
+// START HERE STYLES
+
+//HEADER
+#mainnav {
+	@include grid-unit();
+
+	a:hover {
+		color: rgb(121, 167, 236);
+		background-color: #444;
+		transition: color 1s;
+	}
+
+	a.current { 
+		@include border-radius(utils-units-convert-to-ems(5px));
+		background: rgb(236, 121, 167);
+		color: #eee;
+	}
+
+	a {
+		@include grid-unit($font-size: 0.9, $container-type: both);
+
+		//Set box sizing to border-box
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+		    -ms-box-sizing: border-box;
+		     -o-box-sizing: border-box;
+		        box-sizing: border-box;
+
+
+		font-weight: 800;
+		text-transform: uppercase;
+		text-decoration: none;
+		color: #eee;
+		padding-left: 1em;
+		padding-right: 1em;
+	}
+}
+
+#unitgs-logo {
+	height: 100%;
+	display: inline-block;
+    @include clearfix();
+
+    .first-color, .second-color, .third-color, .fourth-color {
+    	vertical-align: middle;
+    	float: left;
+    	width: 0.25em;
+    	height: 0.720em;
+    	margin-left: 0.125em;
+    }
+    .first-color { margin-left: 0em; background-color: $settings-colors-pink; }
+    .second-color { background-color: $settings-colors-yellow; }
+    .third-color { background-color: $settings-colors-green; }
+    .fourth-color { background-color: $settings-colors-blue; }
+}    
+
+#bigTitle {
+	@include grid-unit($font-size: grid-modular-scale(3), $margin-top: 1/2, $margin-bottom: 1/2, $fit-method: ceil);
+	text-align: center;
+}
+
+/*
+Solution in css to keep the aspect ratio in a fluid design.
+http://ansciath.tumblr.com/post/7347495869/css-aspect-ratio
+*/
+#video-container {
+	@include grid-unit($margin-top: 1);
+    display: inline-block;
+    position: relative;
+}
+#aspect-ratio-enforcer {
+    margin-top: 56.25%; /* 4:3 aspect ratio */
+}
+#video {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: utils-calculate-gutter-width-in-ems();
+    right: utils-calculate-gutter-width-in-ems();
+}
+
+//LAYOUT
+
+#page-content { @include grid-unit(); }
+
+//STEPS
+
+.startup-step { @include grid-unit(); }
+
+#setup-your-base-font, #start-mobile {
+	@include grid-unit($height: 6, $container-type: both);
+	> div { height: 100%; width: 20%; float: left; @include debug-colors(); }
+	> div:first-child { width: 40%; @include debug-colors(); }
+	> div:last-child { width: 40%; @include debug-colors(); }
+}
+
+#devide-verticaly, #set-inactive-columns, #set-the-gutters {
+	@include grid-unit($height: 6, $container-type: both);
+	> div {
+		text-align: center;
+		//Set box sizing to border-box
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+		    -ms-box-sizing: border-box;
+		     -o-box-sizing: border-box;
+		        box-sizing: border-box;
+		height: 100%;
+		width: 10%;
+		float: left;
+		border-right: thin dashed $settings-colors-blue;
+		@include debug-colors();
+	}
+
+	> div:last-child { border-right: none; }
+
+	.inactive {
+		background-color: $settings-colors-verydarkgray;
+		@include debug-colors();
+	}
+}
+
+#define-vertical-rythm {
+	@include grid-unit($height: 6, $container-type: both);
+	> div {
+		@include grid-unit($height: 1, $container-type: both);
+		border-bottom: thin dashed $settings-colors-blue;
+		@include debug-colors();
+		text-align: center;
+	}
+
+	> div:last-child { border-bottom: none; }
+}
+
+#set-the-gutters {
+	> div > div {
+		height: 100%;
+		width: 0.5em;
+		background-color: $settings-colors-yellow;
+		&:first-child { float: left; }
+		&:last-child { float: right; }
+	}
+}
+
+#your-sketches {
+	@include grid-unit($height: 8, $container-type: both);
+    #sketch-320,
+	#sketch-480,
+  	#sketch-960 {
+		float: left;
+	    margin: 0 2%;
+	    height: 100%;
+  	}
+
+	#sketch-320-title, #sketch-480-title, #sketch-960-title {
+		height: 15%;
+		width: 100%;
+		text-align: center;
+		vertical-align: middle;
+	}
+	#sketch-320-layout, #sketch-480-layout, #sketch-960-layout {
+		//Set box sizing to border-box
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+		    -ms-box-sizing: border-box;
+		     -o-box-sizing: border-box;
+		        box-sizing: border-box;
+		height: 85%;
+		width: 100%;
+		border: medium solid $settings-colors-darkgray;
+	}
+
+    .sketch-header,
+    .sketch-nav,
+    .sketch-section-A,
+    .sketch-section-B,
+    .sketch-footer {
+		//Set box sizing to border-box
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+		    -ms-box-sizing: border-box;
+		     -o-box-sizing: border-box;
+		        box-sizing: border-box;
+		border: thin solid $settings-colors-blue;
+		width: 95%;
+		float: left;
+		text-align: center;
+		@include clearfix();
+    }
+
+	#sketch-320 {
+		width: 16%;
+	    .sketch-header,
+	    .sketch-nav,
+	    .sketch-section-A,
+	    .sketch-section-B,
+	    .sketch-footer {
+	    	margin: 2% 5%;
+	    	width: 90%;
+	    	height: 16%;
+	    }
+	}
+	#sketch-480 {
+		width: 24%;
+	    .sketch-header,
+	    .sketch-nav,
+	    .sketch-footer {
+	    	margin: 2% 5%;
+	    	width: 90%;
+	    	height: 16%;
+	    }
+	    .sketch-section-A,
+	    .sketch-section-B {
+	    	margin: 2% 5%;
+	    	width: 42.5%;
+	    	height: 16%;
+	    }
+	    .sketch-section-B {
+	    	margin-left: 0;
+		}    	
+	}
+  	#sketch-960 {
+		width: 48%;
+	    .sketch-header,
+	    .sketch-nav {
+	    	margin: 1.5% 5%;
+	    	width: 42.5%;
+	    	height: 16%;
+	    }
+	    .sketch-section-A,
+	    .sketch-section-B {
+	    	margin: 1.5% 5%;
+	    	width: 42.5%;
+	    	height: 36%;
+	    }
+	    .sketch-section-B, .sketch-nav {
+	    	margin-left: 0;
+		}    	
+	    .sketch-footer {
+	    	margin: 1.5% 5%;
+	    	width: 90%;
+	    	height: 16%;
+	    }
+  	}
+}
+
+#debug-layout, #debug-responsive-layout {
+	@include grid-unit(1/3, last, $margin-left: 1/3, $margin-right: 1/3, $height: 6, $container-type: contained);
+
+	> div {
+		//Set box sizing to border-box
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+		    -ms-box-sizing: border-box;
+		     -o-box-sizing: border-box;
+		        box-sizing: border-box;
+		width: 96%;
+		height: 1.5em;
+		margin: 0.25em 2%;
+		float: left;
+		text-align: center;
+		color: #333333;
+	}
+
+	.sketch-header { background-color: $settings-colors-pink; }
+	.sketch-nav { background-color: $settings-colors-orange; }
+	.sketch-section-A { background-color: $settings-colors-yellow; }
+	.sketch-section-B { background-color: $settings-colors-green; }
+	.sketch-footer { background-color: $settings-colors-blue; }
+}
+
+#debug-responsive-layout {
+	.sketch-section-A, .sketch-section-B {
+		width: 46%;
+		height: 3.5em;
+	}
+	.sketch-section-A { background-color: $settings-colors-lightgray; }
+	.sketch-section-B { background-color: $settings-colors-verylightgray; }
+}
+
+#sidenote-layout {
+	@include grid-unit(1/3, last, $margin-left: 1/3, $margin-right: 1/3, $height: 6, $container-type: contained);
+	text-align: center;
+	color: #333333;
+
+	#article-A {
+		width: 100%;
+		height: 100%;
+		background-color: $settings-colors-orange;
+	}
+
+	#sidenote {
+		width: 50%;
+		height: 50%;
+		float: right;
+		background-color: $settings-colors-pink;
+	}
+}
+
+#easy-start-templates-snippets,
+#want-to-know-more,
+#inspiration-and-references,
+#videos,
+#nested-units,
+#contribute-to-the-project,
+#faqs,
+#sites-using-unitgs {
+	@include grid-unit();
+}
+
+
+//        <footer id="layout-footer">
+//			<h3>Developed by</h3>
+//			<a href="http://bernardoantunes.com" alt="Bernardo Antunes Website">
+//				<img src="/img/MyFace.png" alt="Bernardo Antunes" />
+//				<p>Bernardo Antunes</p>
+//				<p>A father, thinker and world citizen obcessed about making a better world.</p>
+//			</a>
+//            <div id="copyright"><p>&copy; {{ site.time | date: '%Y' }} Bernardo Antunes.</p></div>
+//        </footer>
+
+
+
+
+#layout-footer {
+	@include grid-unit();
+
+	img {
+		height: 4.5em;
+		width: 4.5em;
+		background-color: $settings-colors-lightgray;
+		border-radius: 0.1875em 0.1875em 0.1875em 0.1875em;
+		transition: background-color 1s;
+		&:hover {
+			background-color: $settings-colors-blue;
+		}
+		float: left;
+		margin-right: 0.5em;
+	}
+
+	p { margin-bottom: 0; }
+	a > p:last-child { color: $settings-colors-verylightgray; }
+
+	div {
+		@include grid-unit($font-size: 0.80, $margin-top: 1, $margin-bottom: 1, $container-type: both);
+		text-align: center;
+	}
+}
+
+.documentation-item {
+	@include grid-unit();
+
+	h1 { color: $settings-colors-pink; }
+
+	h3 { color: $settings-colors-orange; }
+
+	#post-comments { @include grid-unit($container-type: both, $margin-top: 1); }
+}
+
+//
+// #########################################################
+//
+/* @media screen and min-width: utils-units-convert-to-ems(480px) */
+//
+//		      .o    .ooooo.     .oooo.                          
+//		    .d88   d88'   `8.  d8P'`Y8b                         
+//		  .d'888   Y88..  .8' 888    888 oo.ooooo.  oooo    ooo 
+//		.d'  888    `88888b.  888    888  888' `88b  `88b..8P'  
+//		88ooo888oo .8'  ``88b 888    888  888   888    Y888'    
+//		     888   `8.   .88P `88b  d88'  888   888  .o8"'88b   
+//		    o888o   `boood8'   `Y8bd8P'   888bod8P' o88'   888o 
+//		                                  888                   
+//		                                 o888o                  
+//
+$void: debug-assert(utils-units-convert-to-ems(480px) == 30em,
+	"media query units conversion error",
+	"480px are #{utils-units-convert-to-ems(480px)}", error);
+@media screen and (min-width: 30em) {
+	#bigTitle {
+		@include grid-unit($font-size: grid-modular-scale(3), $margin-top: 0, $margin-bottom: 0, $fit-method: ceil);
+	}
+}
+
+/* @media screen and (min-width: 600px) */
+//
+//		    .ooo     .oooo.     .oooo.                          
+//		  .88'      d8P'`Y8b   d8P'`Y8b                         
+//		 d88'      888    888 888    888 oo.ooooo.  oooo    ooo 
+//		d888P"Ybo. 888    888 888    888  888' `88b  `88b..8P'  
+//		Y88[   ]88 888    888 888    888  888   888    Y888'    
+//		`Y88   88P `88b  d88' `88b  d88'  888   888  .o8"'88b   
+//		 `88bod8'   `Y8bd8P'   `Y8bd8P'   888bod8P' o88'   888o 
+//		                                  888                   
+//		                                 o888o                  
+//
+$void: debug-assert(utils-units-convert-to-ems(600px) == 37.5em,
+	"media query units conversion error",
+	"600px are #{utils-units-convert-to-ems(600px)}", error);
+@media screen and (min-width: 37.5em) {
+
+}
+//
+/* @media screen and (min-width: 640px) */
+//
+//		    .ooo         .o     .oooo.                          
+//		  .88'         .d88    d8P'`Y8b                         
+//		 d88'        .d'888   888    888 oo.ooooo.  oooo    ooo 
+//		d888P"Ybo. .d'  888   888    888  888' `88b  `88b..8P'  
+//		Y88[   ]88 88ooo888oo 888    888  888   888    Y888'    
+//		`Y88   88P      888   `88b  d88'  888   888  .o8"'88b   
+//		 `88bod8'      o888o   `Y8bd8P'   888bod8P' o88'   888o 
+//		                                  888                   
+//		                                 o888o                  
+//
+@media screen and (min-width: 640px) {
+	//Navigation
+	#mainnav {
+		@include grid-unit($margin-bottom: 1, $container-type: none);
+
+		a:hover {
+			background-color: transparent;
+		}
+
+		a.current:hover {
+			background: rgb(236, 121, 167);
+		}
+
+		a {
+			@include grid-line(1);
+			display: inline;
+			margin: 0;
+			width: auto;
+			clear: none;
+		}
+	}
+}
+
+/* @media screen and (min-width: 720px) */
+//
+//		 ooooooooo   .oooo.     .oooo.                          
+//		d"""""""8' .dP""Y88b   d8P'`Y8b                         
+//		      .8'        ]8P' 888    888 oo.ooooo.  oooo    ooo 
+//		     .8'       .d8P'  888    888  888' `88b  `88b..8P'  
+//		    .8'      .dP'     888    888  888   888    Y888'    
+//		   .8'     .oP     .o `88b  d88'  888   888  .o8"'88b   
+//		  .8'      8888888888  `Y8bd8P'   888bod8P' o88'   888o 
+//		                                  888                   
+//		                                 o888o                  
+//
+@media screen and (min-width: 720px) {
+
+}
+
+/* @media screen and (min-width: 888px) */
+//
+//		 .ooooo.    .ooooo.    .ooooo.                          
+//		d88'   `8. d88'   `8. d88'   `8.                        
+//		Y88..  .8' Y88..  .8' Y88..  .8' oo.ooooo.  oooo    ooo 
+//		 `88888b.   `88888b.   `88888b.   888' `88b  `88b..8P'  
+//		.8'  ``88b .8'  ``88b .8'  ``88b  888   888    Y888'    
+//		`8.   .88P `8.   .88P `8.   .88P  888   888  .o8"'88b   
+//		 `boood8'   `boood8'   `boood8'   888bod8P' o88'   888o 
+//		                                  888                   
+//		                                 o888o                  
+//
+@media screen and (min-width: 888px) {
+
+}
+
+///* @media screen and (min-width: 960px) */
+//
+//		 .ooooo.       .ooo     .oooo.                          
+//		888' `Y88.   .88'      d8P'`Y8b                         
+//		888    888  d88'      888    888 oo.ooooo.  oooo    ooo 
+//		 `Vbood888 d888P"Ybo. 888    888  888' `88b  `88b..8P'  
+//		      888' Y88[   ]88 888    888  888   888    Y888'    
+//		    .88P'  `Y88   88P `88b  d88'  888   888  .o8"'88b   
+//		  .oP'      `88bod8'   `Y8bd8P'   888bod8P' o88'   888o 
+//		                                  888                   
+//		                                 o888o                  
+//
+@media screen and (min-width: 960px) {
+
+	#asDesigned {
+	  max-width: 960px;
+	  margin: 0 auto;
+	}
+}
+//
+///* @media screen and (min-width: 1200px) */
+//@media screen and (min-width: convert-to-media-queries-ems(1200px)) { }
+//
+//		  .o    .oooo.     .oooo.     .oooo.                          
+//		o888  .dP""Y88b   d8P'`Y8b   d8P'`Y8b                         
+//		 888        ]8P' 888    888 888    888 oo.ooooo.  oooo    ooo 
+//		 888      .d8P'  888    888 888    888  888' `88b  `88b..8P'  
+//		 888    .dP'     888    888 888    888  888   888    Y888'    
+//		 888  .oP     .o `88b  d88' `88b  d88'  888   888  .o8"'88b   
+//		o888o 8888888888  `Y8bd8P'   `Y8bd8P'   888bod8P' o88'   888o 
+//		                                        888                   
+//		                                       o888o                  
+//
+
+///* @media screen and (min-width: 1392px) */
+//@media screen and (min-width: convert-to-media-queries-ems(1392px)) { }
+//
+//		
+//		  .o    .oooo.    .ooooo.     .oooo.                          
+//		o888  .dP""Y88b  888' `Y88. .dP""Y88b                         
+//		 888        ]8P' 888    888       ]8P' oo.ooooo.  oooo    ooo 
+//		 888      <88b.   `Vbood888     .d8P'   888' `88b  `88b..8P'  
+//		 888       `88b.       888'   .dP'      888   888    Y888'    
+//		 888  o.   .88P      .88P'  .oP     .o  888   888  .o8"'88b   
+//		o888o `8bd88P'     .oP'     8888888888  888bod8P' o88'   888o 
+//		                                        888                   
+//		                                       o888o                  
+//
+
+///* @media screen and (min-width: 1680px) */
+//@media screen and (min-width: convert-to-media-queries-ems(1680px)) { }
+//
+//		
+//		  .o      .ooo    .ooooo.     .oooo.                          
+//		o888    .88'     d88'   `8.  d8P'`Y8b                         
+//		 888   d88'      Y88..  .8' 888    888 oo.ooooo.  oooo    ooo 
+//		 888  d888P"Ybo.  `88888b.  888    888  888' `88b  `88b..8P'  
+//		 888  Y88[   ]88 .8'  ``88b 888    888  888   888    Y888'    
+//		 888  `Y88   88P `8.   .88P `88b  d88'  888   888  .o8"'88b   
+//		o888o  `88bod8'   `boood8'   `Y8bd8P'   888bod8P' o88'   888o 
+//		                                        888                   
+//		                                       o888o                  
+//
+
+///* @media screen and (min-width: 1872px) */
+//@media screen and (min-width: convert-to-media-queries-ems(1872px)) { }
+//
+//		  .o   .ooooo.    ooooooooo   .oooo.                          
+//		o888  d88'   `8. d"""""""8' .dP""Y88b                         
+//		 888  Y88..  .8'       .8'        ]8P' oo.ooooo.  oooo    ooo 
+//		 888   `88888b.       .8'       .d8P'   888' `88b  `88b..8P'  
+//		 888  .8'  ``88b     .8'      .dP'      888   888    Y888'    
+//		 888  `8.   .88P    .8'     .oP     .o  888   888  .o8"'88b   
+//		o888o  `boood8'    .8'      8888888888  888bod8P' o88'   888o 
+//		                                        888                   
+//		                                       o888o                  
+//
+
+///* @media screen and (min-width: 2080px) */
+//@media screen and (min-width: convert-to-media-queries-ems(2080px)) { }
+//
+//		  .oooo.     .oooo.    .ooooo.     .oooo.                          
+//		.dP""Y88b   d8P'`Y8b  d88'   `8.  d8P'`Y8b                         
+//		      ]8P' 888    888 Y88..  .8' 888    888 oo.ooooo.  oooo    ooo 
+//		    .d8P'  888    888  `88888b.  888    888  888' `88b  `88b..8P'  
+//		  .dP'     888    888 .8'  ``88b 888    888  888   888    Y888'    
+//		.oP     .o `88b  d88' `8.   .88P `88b  d88'  888   888  .o8"'88b   
+//		8888888888  `Y8bd8P'   `boood8'   `Y8bd8P'   888bod8P' o88'   888o 
+//		                                             888                   
+//		                                            o888o                  
+//
+
+//* { transition: all 1s; }
+//

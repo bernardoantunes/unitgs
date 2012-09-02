@@ -1,0 +1,96 @@
+<section class="startup-step">
+<h1>2. Create your grid units</h1>
+
+<h2>2.1 Get your sketches</h2>
+
+<div id="your-sketches">
+  <div id="sketch-320">
+    <div id="sketch-320-title">320px</div>
+    <div id="sketch-320-layout">
+      <div class="sketch-header">header</div>
+      <div class="sketch-nav">nav</div>
+      <div class="sketch-section-A">A</div>
+      <div class="sketch-section-B">B</div>
+      <div class="sketch-footer">footer</div>
+    </div>
+  </div>
+  <div id="sketch-480">
+    <div id="sketch-480-title">480px</div>
+    <div id="sketch-480-layout">
+      <div class="sketch-header">header</div>
+      <div class="sketch-nav">nav</div>
+      <div class="sketch-section-A">A</div>
+      <div class="sketch-section-B">B</div>
+      <div class="sketch-footer">footer</div>
+    </div>
+  </div>
+  <div id="sketch-960">
+    <div id="sketch-960-title">960px</div>
+    <div id="sketch-960-layout">
+      <div class="sketch-header">header</div>
+      <div class="sketch-nav">nav</div>
+      <div class="sketch-section-A">A</div>
+      <div class="sketch-section-B">B</div>
+      <div class="sketch-footer">footer</div>
+    </div>
+  </div>
+</div>
+
+<p class="note">Note: Sketch your layouts before starting the code</p>
+<p class="best-practice">Best practice: Define your breakpoint with min-width.</p>
+
+<h2>2.2 Get your html ready</h2>
+
+{% highlight html %}
+<body>
+    <header></header>
+    <nav></nav>
+    <section id="sectionA"></section>
+    <section id="sectionB"></section>
+    <footer></footer>
+</body>
+</code>
+{% endhighlight %}
+
+<h2>2.3 Declare your grid units</h2>
+
+{% highlight sass %}
+header { @include grid-unit(); }
+nav { @include grid-unit(); }
+section { @include grid-unit(); }
+footer { @include grid-unit(); }
+{% endhighlight %}
+
+<p class="tip">Tip: Code mobile first.</p>
+
+<h2>2.4 Be responsive</h2>
+
+{% highlight sass %}
+@media screen and min-width(30em)
+{
+  #sectionA { @include grid-unit(1/2); }
+  #sectionB { @include grid-unit(1/2, last); }
+}
+{% endhighlight %}
+
+<p>Adjust your design to different resolutions and orientations.</p>
+
+<p class="best-practice">Best practice: You can use fractions like 1/2 or 2/3, the grid will calculate the correct numbers of active columns for you.</p>
+
+<p class="note">Note: Declare only what you changed.</p>
+<p class="atention">Atention: You have te set the grid width, if you don't, it will occupy all active columns.</p>
+
+<h2>2.5 Go BIG</h2>
+
+{% highlight sass %}
+@media screen and min-width(60em)
+{
+  body { set-scale(1.25); }
+  header { @include grid-unit(1/3); }
+  nav { @include grid-unit(2/3, last); }
+}
+{% endhighlight %}
+
+<p>Scale down or scale up as you need, the grid will maintain the proportionality of its elements.</p>
+
+</section>
