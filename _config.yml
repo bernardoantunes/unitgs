@@ -6,7 +6,7 @@ pygments: true
 permalink: /:title
 paginate: 10
 exclude: ["Rakefile", "LICENSE.txt", "CNAME"]
-title: UnitGS
+title: Unit Grid System
 url: http://unit.gs
 github_user: bernardoantunes
 navigation:
