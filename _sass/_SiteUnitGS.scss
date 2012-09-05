@@ -119,6 +119,13 @@ img {
 
 // START HERE STYLES
 
+#whatis {
+	@include grid-unit($font-size: grid-modular-scale(1)/5*4, $margin-top: 3/4, $margin-bottom: 1/4);
+	font-weight: 400;
+	font-style: italic;
+	color: #ccc;
+}
+
 //HEADER
 #mainnav {
 	@include grid-unit();
@@ -550,6 +557,10 @@ $void: debug-assert(utils-units-convert-to-ems(600px) == 37.5em,
 			width: auto;
 			clear: none;
 		}
+	}
+
+	#whatis {
+		@include grid-line($font-size: grid-modular-scale(1), $margin-top: 0, $margin-bottom: 0);
 	}
 }
 
