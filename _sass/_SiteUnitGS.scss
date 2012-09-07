@@ -220,7 +220,7 @@ http://ansciath.tumblr.com/post/7347495869/css-aspect-ratio
 	> div:last-child { width: 40%; @include debug-colors(); }
 }
 
-#devide-verticaly, #set-inactive-columns, #set-the-gutters {
+#divide-verticaly, #set-inactive-columns, #set-the-gutters {
 	@include grid-unit($height: 6, $container-type: both);
 	> div {
 		text-align: center;
@@ -427,10 +427,28 @@ http://ansciath.tumblr.com/post/7347495869/css-aspect-ratio
 #inspiration-and-references,
 #videos,
 #nested-units,
+#follow-the-unit,
 #contribute-to-the-project,
 #faqs,
 #sites-using-unitgs {
 	@include grid-unit();
+}
+
+#sites-using-unitgs {
+	ul {
+		list-style:none;
+		li {
+			@include grid-unit($position: middle, $margin-bottom: 1, $container-type: both);
+	
+			figcaption {
+				@include grid-line();
+				text-align: center;
+				font-weight: 600;
+			}
+		}
+	}
+
+	p { @include grid-unit($container-type: both); }
 }
 
 
@@ -503,6 +521,18 @@ $void: debug-assert(utils-units-convert-to-ems(480px) == 30em,
 @media screen and (min-width: 30em) {
 	#bigTitle {
 		@include grid-unit($font-size: grid-modular-scale(3), $margin-top: 0, $margin-bottom: 0, $fit-method: ceil);
+	}
+
+	#sites-using-unitgs > ul > li {
+		@include grid-unit(1/2, $position: middle, $margin-bottom: 1, $container-type: both);
+		//Set box sizing to border-box
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+		    -ms-box-sizing: border-box;
+		     -o-box-sizing: border-box;
+		        box-sizing: border-box;
+		&.odd { padding-right: utils-calculate-gutter-width-in-ems()/2; }
+		&.even { padding-left: utils-calculate-gutter-width-in-ems()/2; }
 	}
 }
 
