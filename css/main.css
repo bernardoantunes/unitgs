@@ -395,7 +395,7 @@ Solution in css to keep the aspect ratio in a fluid design.
 http://ansciath.tumblr.com/post/7347495869/css-aspect-ratio
 */
 /* line 192, ../_sass/_SiteUnitGS.scss */
-#video-container {
+#faststart-video {
   font-size: 1em;
   line-height: 1.6;
   padding-top: 0;
@@ -405,6 +405,25 @@ http://ansciath.tumblr.com/post/7347495869/css-aspect-ratio
   width: 96%;
   margin-left: 2%;
   margin-right: 2%;
+  float: left;
+  padding-left: 0;
+  padding-right: 0;
+  clear: both;
+  display: block;
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 195, ../_sass/_SiteUnitGS.scss */
+#faststart-video #video-container {
+  font-size: 1em;
+  line-height: 1.6;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: 0%;
   float: left;
   padding-left: 0.8em;
   padding-right: 0.8em;
@@ -418,14 +437,37 @@ http://ansciath.tumblr.com/post/7347495869/css-aspect-ratio
   display: inline-block;
   position: relative;
 }
+/* line 201, ../_sass/_SiteUnitGS.scss */
+#faststart-video figcaption {
+  font-size: 0.8em;
+  line-height: 2;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: 0%;
+  float: left;
+  padding-left: 1em;
+  padding-right: 1em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  clear: both;
+  display: inline;
+  text-align: center;
+}
 
-/* line 197, ../_sass/_SiteUnitGS.scss */
+/* line 207, ../_sass/_SiteUnitGS.scss */
 #aspect-ratio-enforcer {
   margin-top: 56.25%;
   /* 4:3 aspect ratio */
 }
 
-/* line 200, ../_sass/_SiteUnitGS.scss */
+/* line 210, ../_sass/_SiteUnitGS.scss */
 #video {
   position: absolute;
   top: 0;
@@ -434,7 +476,7 @@ http://ansciath.tumblr.com/post/7347495869/css-aspect-ratio
   right: 0.8em;
 }
 
-/* line 210, ../_sass/_SiteUnitGS.scss */
+/* line 220, ../_sass/_SiteUnitGS.scss */
 #page-content {
   font-size: 1em;
   line-height: 1.6;
@@ -457,7 +499,7 @@ http://ansciath.tumblr.com/post/7347495869/css-aspect-ratio
   display: inline;
 }
 
-/* line 214, ../_sass/_SiteUnitGS.scss */
+/* line 224, ../_sass/_SiteUnitGS.scss */
 .startup-step {
   font-size: 1em;
   line-height: 1.6;
@@ -480,7 +522,7 @@ http://ansciath.tumblr.com/post/7347495869/css-aspect-ratio
   display: inline;
 }
 
-/* line 216, ../_sass/_SiteUnitGS.scss */
+/* line 226, ../_sass/_SiteUnitGS.scss */
 #setup-your-base-font, #start-mobile {
   font-size: 1em;
   line-height: 1.6;
@@ -500,22 +542,22 @@ http://ansciath.tumblr.com/post/7347495869/css-aspect-ratio
   overflow: hidden;
   *zoom: 1;
 }
-/* line 218, ../_sass/_SiteUnitGS.scss */
+/* line 228, ../_sass/_SiteUnitGS.scss */
 #setup-your-base-font > div, #start-mobile > div {
   height: 100%;
   width: 20%;
   float: left;
 }
-/* line 219, ../_sass/_SiteUnitGS.scss */
+/* line 229, ../_sass/_SiteUnitGS.scss */
 #setup-your-base-font > div:first-child, #start-mobile > div:first-child {
   width: 40%;
 }
-/* line 220, ../_sass/_SiteUnitGS.scss */
+/* line 230, ../_sass/_SiteUnitGS.scss */
 #setup-your-base-font > div:last-child, #start-mobile > div:last-child {
   width: 40%;
 }
 
-/* line 223, ../_sass/_SiteUnitGS.scss */
+/* line 233, ../_sass/_SiteUnitGS.scss */
 #divide-verticaly, #set-inactive-columns, #set-the-gutters {
   font-size: 1em;
   line-height: 1.6;
@@ -535,7 +577,7 @@ http://ansciath.tumblr.com/post/7347495869/css-aspect-ratio
   overflow: hidden;
   *zoom: 1;
 }
-/* line 225, ../_sass/_SiteUnitGS.scss */
+/* line 235, ../_sass/_SiteUnitGS.scss */
 #divide-verticaly > div, #set-inactive-columns > div, #set-the-gutters > div {
   text-align: center;
   -webkit-box-sizing: border-box;
@@ -548,16 +590,16 @@ http://ansciath.tumblr.com/post/7347495869/css-aspect-ratio
   float: left;
   border-right: thin dashed #79a7ec;
 }
-/* line 240, ../_sass/_SiteUnitGS.scss */
+/* line 250, ../_sass/_SiteUnitGS.scss */
 #divide-verticaly > div:last-child, #set-inactive-columns > div:last-child, #set-the-gutters > div:last-child {
   border-right: none;
 }
-/* line 242, ../_sass/_SiteUnitGS.scss */
+/* line 252, ../_sass/_SiteUnitGS.scss */
 #divide-verticaly .inactive, #set-inactive-columns .inactive, #set-the-gutters .inactive {
   background-color: #1a1c1d;
 }
 
-/* line 248, ../_sass/_SiteUnitGS.scss */
+/* line 258, ../_sass/_SiteUnitGS.scss */
 #define-vertical-rythm {
   font-size: 1em;
   line-height: 1.6;
@@ -577,7 +619,7 @@ http://ansciath.tumblr.com/post/7347495869/css-aspect-ratio
   overflow: hidden;
   *zoom: 1;
 }
-/* line 250, ../_sass/_SiteUnitGS.scss */
+/* line 260, ../_sass/_SiteUnitGS.scss */
 #define-vertical-rythm > div {
   font-size: 1em;
   line-height: 1.6;
@@ -599,27 +641,27 @@ http://ansciath.tumblr.com/post/7347495869/css-aspect-ratio
   border-bottom: thin dashed #79a7ec;
   text-align: center;
 }
-/* line 257, ../_sass/_SiteUnitGS.scss */
+/* line 267, ../_sass/_SiteUnitGS.scss */
 #define-vertical-rythm > div:last-child {
   border-bottom: none;
 }
 
-/* line 261, ../_sass/_SiteUnitGS.scss */
+/* line 271, ../_sass/_SiteUnitGS.scss */
 #set-the-gutters > div > div {
   height: 100%;
   width: 0.5em;
   background-color: #ecec79;
 }
-/* line 265, ../_sass/_SiteUnitGS.scss */
+/* line 275, ../_sass/_SiteUnitGS.scss */
 #set-the-gutters > div > div:first-child {
   float: left;
 }
-/* line 266, ../_sass/_SiteUnitGS.scss */
+/* line 276, ../_sass/_SiteUnitGS.scss */
 #set-the-gutters > div > div:last-child {
   float: right;
 }
 
-/* line 270, ../_sass/_SiteUnitGS.scss */
+/* line 280, ../_sass/_SiteUnitGS.scss */
 #your-sketches {
   font-size: 1em;
   line-height: 1.6;
@@ -639,7 +681,7 @@ http://ansciath.tumblr.com/post/7347495869/css-aspect-ratio
   overflow: hidden;
   *zoom: 1;
 }
-/* line 274, ../_sass/_SiteUnitGS.scss */
+/* line 284, ../_sass/_SiteUnitGS.scss */
 #your-sketches #sketch-320,
 #your-sketches #sketch-480,
 #your-sketches #sketch-960 {
@@ -647,14 +689,14 @@ http://ansciath.tumblr.com/post/7347495869/css-aspect-ratio
   margin: 0 2%;
   height: 100%;
 }
-/* line 280, ../_sass/_SiteUnitGS.scss */
+/* line 290, ../_sass/_SiteUnitGS.scss */
 #your-sketches #sketch-320-title, #your-sketches #sketch-480-title, #your-sketches #sketch-960-title {
   height: 15%;
   width: 100%;
   text-align: center;
   vertical-align: middle;
 }
-/* line 286, ../_sass/_SiteUnitGS.scss */
+/* line 296, ../_sass/_SiteUnitGS.scss */
 #your-sketches #sketch-320-layout, #your-sketches #sketch-480-layout, #your-sketches #sketch-960-layout {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -665,7 +707,7 @@ http://ansciath.tumblr.com/post/7347495869/css-aspect-ratio
   width: 100%;
   border: medium solid #595959;
 }
-/* line 302, ../_sass/_SiteUnitGS.scss */
+/* line 312, ../_sass/_SiteUnitGS.scss */
 #your-sketches .sketch-header,
 #your-sketches .sketch-nav,
 #your-sketches .sketch-section-A,
@@ -683,11 +725,11 @@ http://ansciath.tumblr.com/post/7347495869/css-aspect-ratio
   overflow: hidden;
   *zoom: 1;
 }
-/* line 316, ../_sass/_SiteUnitGS.scss */
+/* line 326, ../_sass/_SiteUnitGS.scss */
 #your-sketches #sketch-320 {
   width: 16%;
 }
-/* line 322, ../_sass/_SiteUnitGS.scss */
+/* line 332, ../_sass/_SiteUnitGS.scss */
 #your-sketches #sketch-320 .sketch-header,
 #your-sketches #sketch-320 .sketch-nav,
 #your-sketches #sketch-320 .sketch-section-A,
@@ -697,11 +739,11 @@ http://ansciath.tumblr.com/post/7347495869/css-aspect-ratio
   width: 90%;
   height: 16%;
 }
-/* line 328, ../_sass/_SiteUnitGS.scss */
+/* line 338, ../_sass/_SiteUnitGS.scss */
 #your-sketches #sketch-480 {
   width: 24%;
 }
-/* line 332, ../_sass/_SiteUnitGS.scss */
+/* line 342, ../_sass/_SiteUnitGS.scss */
 #your-sketches #sketch-480 .sketch-header,
 #your-sketches #sketch-480 .sketch-nav,
 #your-sketches #sketch-480 .sketch-footer {
@@ -709,47 +751,47 @@ http://ansciath.tumblr.com/post/7347495869/css-aspect-ratio
   width: 90%;
   height: 16%;
 }
-/* line 338, ../_sass/_SiteUnitGS.scss */
+/* line 348, ../_sass/_SiteUnitGS.scss */
 #your-sketches #sketch-480 .sketch-section-A,
 #your-sketches #sketch-480 .sketch-section-B {
   margin: 2% 5%;
   width: 42.5%;
   height: 16%;
 }
-/* line 343, ../_sass/_SiteUnitGS.scss */
+/* line 353, ../_sass/_SiteUnitGS.scss */
 #your-sketches #sketch-480 .sketch-section-B {
   margin-left: 0;
 }
-/* line 347, ../_sass/_SiteUnitGS.scss */
+/* line 357, ../_sass/_SiteUnitGS.scss */
 #your-sketches #sketch-960 {
   width: 48%;
 }
-/* line 350, ../_sass/_SiteUnitGS.scss */
+/* line 360, ../_sass/_SiteUnitGS.scss */
 #your-sketches #sketch-960 .sketch-header,
 #your-sketches #sketch-960 .sketch-nav {
   margin: 1.5% 5%;
   width: 42.5%;
   height: 16%;
 }
-/* line 356, ../_sass/_SiteUnitGS.scss */
+/* line 366, ../_sass/_SiteUnitGS.scss */
 #your-sketches #sketch-960 .sketch-section-A,
 #your-sketches #sketch-960 .sketch-section-B {
   margin: 1.5% 5%;
   width: 42.5%;
   height: 36%;
 }
-/* line 361, ../_sass/_SiteUnitGS.scss */
+/* line 371, ../_sass/_SiteUnitGS.scss */
 #your-sketches #sketch-960 .sketch-section-B, #your-sketches #sketch-960 .sketch-nav {
   margin-left: 0;
 }
-/* line 364, ../_sass/_SiteUnitGS.scss */
+/* line 374, ../_sass/_SiteUnitGS.scss */
 #your-sketches #sketch-960 .sketch-footer {
   margin: 1.5% 5%;
   width: 90%;
   height: 16%;
 }
 
-/* line 372, ../_sass/_SiteUnitGS.scss */
+/* line 382, ../_sass/_SiteUnitGS.scss */
 #debug-layout, #debug-responsive-layout {
   font-size: 1em;
   line-height: 1.6;
@@ -772,7 +814,7 @@ http://ansciath.tumblr.com/post/7347495869/css-aspect-ratio
   clear: both;
   display: inline;
 }
-/* line 375, ../_sass/_SiteUnitGS.scss */
+/* line 385, ../_sass/_SiteUnitGS.scss */
 #debug-layout > div, #debug-responsive-layout > div {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -786,42 +828,42 @@ http://ansciath.tumblr.com/post/7347495869/css-aspect-ratio
   text-align: center;
   color: #333333;
 }
-/* line 390, ../_sass/_SiteUnitGS.scss */
+/* line 400, ../_sass/_SiteUnitGS.scss */
 #debug-layout .sketch-header, #debug-responsive-layout .sketch-header {
   background-color: #ec79a7;
 }
-/* line 391, ../_sass/_SiteUnitGS.scss */
+/* line 401, ../_sass/_SiteUnitGS.scss */
 #debug-layout .sketch-nav, #debug-responsive-layout .sketch-nav {
   background-color: #eca779;
 }
-/* line 392, ../_sass/_SiteUnitGS.scss */
+/* line 402, ../_sass/_SiteUnitGS.scss */
 #debug-layout .sketch-section-A, #debug-responsive-layout .sketch-section-A {
   background-color: #ecec79;
 }
-/* line 393, ../_sass/_SiteUnitGS.scss */
+/* line 403, ../_sass/_SiteUnitGS.scss */
 #debug-layout .sketch-section-B, #debug-responsive-layout .sketch-section-B {
   background-color: #90ec79;
 }
-/* line 394, ../_sass/_SiteUnitGS.scss */
+/* line 404, ../_sass/_SiteUnitGS.scss */
 #debug-layout .sketch-footer, #debug-responsive-layout .sketch-footer {
   background-color: #79a7ec;
 }
 
-/* line 398, ../_sass/_SiteUnitGS.scss */
+/* line 408, ../_sass/_SiteUnitGS.scss */
 #debug-responsive-layout .sketch-section-A, #debug-responsive-layout .sketch-section-B {
   width: 46%;
   height: 3.5em;
 }
-/* line 402, ../_sass/_SiteUnitGS.scss */
+/* line 412, ../_sass/_SiteUnitGS.scss */
 #debug-responsive-layout .sketch-section-A {
   background-color: #d8d8d8;
 }
-/* line 403, ../_sass/_SiteUnitGS.scss */
+/* line 413, ../_sass/_SiteUnitGS.scss */
 #debug-responsive-layout .sketch-section-B {
   background-color: #ececec;
 }
 
-/* line 406, ../_sass/_SiteUnitGS.scss */
+/* line 416, ../_sass/_SiteUnitGS.scss */
 #sidenote-layout {
   font-size: 1em;
   line-height: 1.6;
@@ -846,13 +888,13 @@ http://ansciath.tumblr.com/post/7347495869/css-aspect-ratio
   text-align: center;
   color: #333333;
 }
-/* line 411, ../_sass/_SiteUnitGS.scss */
+/* line 421, ../_sass/_SiteUnitGS.scss */
 #sidenote-layout #article-A {
   width: 100%;
   height: 100%;
   background-color: #eca779;
 }
-/* line 417, ../_sass/_SiteUnitGS.scss */
+/* line 427, ../_sass/_SiteUnitGS.scss */
 #sidenote-layout #sidenote {
   width: 50%;
   height: 50%;
@@ -860,7 +902,7 @@ http://ansciath.tumblr.com/post/7347495869/css-aspect-ratio
   background-color: #ec79a7;
 }
 
-/* line 433, ../_sass/_SiteUnitGS.scss */
+/* line 443, ../_sass/_SiteUnitGS.scss */
 #easy-start-templates-snippets,
 #want-to-know-more,
 #inspiration-and-references,
@@ -891,11 +933,11 @@ http://ansciath.tumblr.com/post/7347495869/css-aspect-ratio
   display: inline;
 }
 
-/* line 438, ../_sass/_SiteUnitGS.scss */
+/* line 448, ../_sass/_SiteUnitGS.scss */
 #sites-using-unitgs ul {
   list-style: none;
 }
-/* line 440, ../_sass/_SiteUnitGS.scss */
+/* line 450, ../_sass/_SiteUnitGS.scss */
 #sites-using-unitgs ul li {
   font-size: 1em;
   line-height: 1.6;
@@ -914,7 +956,7 @@ http://ansciath.tumblr.com/post/7347495869/css-aspect-ratio
   overflow: hidden;
   *zoom: 1;
 }
-/* line 443, ../_sass/_SiteUnitGS.scss */
+/* line 453, ../_sass/_SiteUnitGS.scss */
 #sites-using-unitgs ul li figcaption {
   font-size: 1em;
   line-height: 1.6;
@@ -925,7 +967,7 @@ http://ansciath.tumblr.com/post/7347495869/css-aspect-ratio
   text-align: center;
   font-weight: 600;
 }
-/* line 451, ../_sass/_SiteUnitGS.scss */
+/* line 461, ../_sass/_SiteUnitGS.scss */
 #sites-using-unitgs p {
   font-size: 1em;
   line-height: 1.6;
@@ -945,7 +987,7 @@ http://ansciath.tumblr.com/post/7347495869/css-aspect-ratio
   *zoom: 1;
 }
 
-/* line 468, ../_sass/_SiteUnitGS.scss */
+/* line 478, ../_sass/_SiteUnitGS.scss */
 #layout-footer {
   font-size: 1em;
   line-height: 1.6;
@@ -967,7 +1009,7 @@ http://ansciath.tumblr.com/post/7347495869/css-aspect-ratio
   clear: both;
   display: inline;
 }
-/* line 471, ../_sass/_SiteUnitGS.scss */
+/* line 481, ../_sass/_SiteUnitGS.scss */
 #layout-footer img {
   height: 4.5em;
   width: 4.5em;
@@ -977,19 +1019,19 @@ http://ansciath.tumblr.com/post/7347495869/css-aspect-ratio
   float: left;
   margin-right: 0.5em;
 }
-/* line 477, ../_sass/_SiteUnitGS.scss */
+/* line 487, ../_sass/_SiteUnitGS.scss */
 #layout-footer img:hover {
   background-color: #79a7ec;
 }
-/* line 484, ../_sass/_SiteUnitGS.scss */
+/* line 494, ../_sass/_SiteUnitGS.scss */
 #layout-footer p {
   margin-bottom: 0;
 }
-/* line 485, ../_sass/_SiteUnitGS.scss */
+/* line 495, ../_sass/_SiteUnitGS.scss */
 #layout-footer a > p:last-child {
   color: #ececec;
 }
-/* line 487, ../_sass/_SiteUnitGS.scss */
+/* line 497, ../_sass/_SiteUnitGS.scss */
 #layout-footer div {
   font-size: 0.8em;
   line-height: 2;
@@ -1010,7 +1052,7 @@ http://ansciath.tumblr.com/post/7347495869/css-aspect-ratio
   text-align: center;
 }
 
-/* line 493, ../_sass/_SiteUnitGS.scss */
+/* line 503, ../_sass/_SiteUnitGS.scss */
 .documentation-item {
   font-size: 1em;
   line-height: 1.6;
@@ -1032,15 +1074,15 @@ http://ansciath.tumblr.com/post/7347495869/css-aspect-ratio
   clear: both;
   display: inline;
 }
-/* line 496, ../_sass/_SiteUnitGS.scss */
+/* line 506, ../_sass/_SiteUnitGS.scss */
 .documentation-item h1 {
   color: #ec79a7;
 }
-/* line 498, ../_sass/_SiteUnitGS.scss */
+/* line 508, ../_sass/_SiteUnitGS.scss */
 .documentation-item h3 {
   color: #eca779;
 }
-/* line 500, ../_sass/_SiteUnitGS.scss */
+/* line 510, ../_sass/_SiteUnitGS.scss */
 .documentation-item #post-comments {
   font-size: 1em;
   line-height: 1.6;
@@ -1062,7 +1104,7 @@ http://ansciath.tumblr.com/post/7347495869/css-aspect-ratio
 
 /* @media screen and min-width: utils-units-convert-to-ems(480px) */
 @media screen and (min-width: 30em) {
-  /* line 522, ../_sass/_SiteUnitGS.scss */
+  /* line 532, ../_sass/_SiteUnitGS.scss */
   #bigTitle {
     font-size: 1.6em;
     line-height: 2;
@@ -1085,7 +1127,7 @@ http://ansciath.tumblr.com/post/7347495869/css-aspect-ratio
     display: inline;
   }
 
-  /* line 526, ../_sass/_SiteUnitGS.scss */
+  /* line 536, ../_sass/_SiteUnitGS.scss */
   #sites-using-unitgs > ul > li {
     font-size: 1em;
     line-height: 1.6;
@@ -1109,11 +1151,11 @@ http://ansciath.tumblr.com/post/7347495869/css-aspect-ratio
     -o-box-sizing: border-box;
     box-sizing: border-box;
   }
-  /* line 534, ../_sass/_SiteUnitGS.scss */
+  /* line 544, ../_sass/_SiteUnitGS.scss */
   #sites-using-unitgs > ul > li.odd {
     padding-right: 0.4em;
   }
-  /* line 535, ../_sass/_SiteUnitGS.scss */
+  /* line 545, ../_sass/_SiteUnitGS.scss */
   #sites-using-unitgs > ul > li.even {
     padding-left: 0.4em;
   }
@@ -1121,7 +1163,7 @@ http://ansciath.tumblr.com/post/7347495869/css-aspect-ratio
 /* @media screen and (min-width: 600px) */
 /* @media screen and (min-width: 640px) */
 @media screen and (min-width: 640px) {
-  /* line 572, ../_sass/_SiteUnitGS.scss */
+  /* line 582, ../_sass/_SiteUnitGS.scss */
   #mainnav {
     font-size: 1em;
     line-height: 1.6;
@@ -1143,15 +1185,15 @@ http://ansciath.tumblr.com/post/7347495869/css-aspect-ratio
     clear: both;
     display: inline;
   }
-  /* line 575, ../_sass/_SiteUnitGS.scss */
+  /* line 585, ../_sass/_SiteUnitGS.scss */
   #mainnav a:hover {
     background-color: transparent;
   }
-  /* line 579, ../_sass/_SiteUnitGS.scss */
+  /* line 589, ../_sass/_SiteUnitGS.scss */
   #mainnav a.current:hover {
     background: #ec79a7;
   }
-  /* line 583, ../_sass/_SiteUnitGS.scss */
+  /* line 593, ../_sass/_SiteUnitGS.scss */
   #mainnav a {
     font-size: 1em;
     line-height: 1.6;
@@ -1165,7 +1207,7 @@ http://ansciath.tumblr.com/post/7347495869/css-aspect-ratio
     clear: none;
   }
 
-  /* line 592, ../_sass/_SiteUnitGS.scss */
+  /* line 602, ../_sass/_SiteUnitGS.scss */
   #whatis {
     font-size: 1.2em;
     line-height: 1.333;
@@ -1178,7 +1220,7 @@ http://ansciath.tumblr.com/post/7347495869/css-aspect-ratio
 /* @media screen and (min-width: 720px) */
 /* @media screen and (min-width: 888px) */
 @media screen and (min-width: 960px) {
-  /* line 643, ../_sass/_SiteUnitGS.scss */
+  /* line 653, ../_sass/_SiteUnitGS.scss */
   #asDesigned {
     max-width: 960px;
     margin: 0 auto;

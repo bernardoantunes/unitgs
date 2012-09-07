@@ -189,11 +189,21 @@ img {
 Solution in css to keep the aspect ratio in a fluid design.
 http://ansciath.tumblr.com/post/7347495869/css-aspect-ratio
 */
-#video-container {
-	@include grid-unit($margin-top: 1);
-    display: inline-block;
-    position: relative;
+#faststart-video {
+	@include grid-unit($margin-top: 1, $container-type: container);
+
+	#video-container {
+		@include grid-unit($container-type: contained);
+	    display: inline-block;
+	    position: relative;
+	}
+
+	figcaption {
+		@include grid-unit($font-size: 0.80, $container-type: contained);
+		text-align: center;
+	}
 }
+
 #aspect-ratio-enforcer {
     margin-top: 56.25%; /* 4:3 aspect ratio */
 }
