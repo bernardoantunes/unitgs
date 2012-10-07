@@ -5,7 +5,7 @@ user-level: User
 layout: post
 ---
 
-# function utils-convert-to-ems
+# function utils-convert-pixels-to-ems
 
 It calculates the ems that correspond to the number of pixels passed.
 It uses the base font size, the current scale and the font-size of the grid units where it is contained to do the conversion.
