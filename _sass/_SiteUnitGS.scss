@@ -50,6 +50,11 @@ $settings-colors-links: $settings-colors-blue;
 //This function should be applied to the body.
 @include unitgs-init-grid(0.8);
 
+//Update for Sidemode in IE 10 in Windows 8.
+@-ms-viewport{
+    width: device-width;
+}
+
 html {
 	height: 100%;
 }
@@ -70,7 +75,7 @@ body{
 //Here I set the scale definitions.
 @function grid-modular-scale($multiple)
 {
-	@return modular-scale($multiple, 1 1.6, $golden $fourth);
+	@return modular-scale($multiple, 1 1.6, golden_ratio() fourth());
 }
 
 a, a:visited {
