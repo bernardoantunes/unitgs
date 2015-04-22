@@ -3,7 +3,7 @@
 //  Unit Grid System (0.9) 	<http://unit.gs/>
 //  by Bernardo Antunes		<http://bernardoantunes.com/>
 //  licensed under MIT 		<http://opensource.org/licenses/mit-license.php>
-//	
+//
 //
 
 //                              DOCUMENTATION
@@ -69,18 +69,18 @@ $debug-column-color-lightness: 70%;
 	$debug-column-color: hsl(
 		$debug-column-color-hue-with-displacement,
 		$debug-column-color-saturation-with-displacement,
-		$debug-column-color-lightness-with-displacement);
+		$debug-column-color-lightness-with-displacement) !global;
 
 	//Lets change the color.
-	$debug-column-color-hue: $debug-column-color-hue + 12;
+	$debug-column-color-hue: $debug-column-color-hue + 12 !global;
 	@if $debug-column-color-hue > 360 {
 		$debug-column-color-hue: $debug-column-color-hue - 360;
-		$debug-column-color-saturation: $debug-column-color-saturation + 5%;
+		$debug-column-color-saturation: $debug-column-color-saturation + 5% !global;
 		@if $debug-column-color-saturation > 100% {
-			$debug-column-color-saturation: 25%; 
-			$debug-column-color-lightness: $debug-column-color-lightness + 10%;
+			$debug-column-color-saturation: 25% !global;
+			$debug-column-color-lightness: $debug-column-color-lightness + 10% !global;
 			@if $debug-column-color-lightness > 100% {
-				$debug-column-color-lightness: 50%;
+				$debug-column-color-lightness: 50% !global;
 			}
 		}
 	}
@@ -115,7 +115,7 @@ $debug-column-color-lightness: 70%;
 		@if $trace-level-item == $trace-level {
 			@return $trace-level-index;
 		}
-	
+
 		//Increment the counter.
 		$trace-level-index: $trace-level-index + 1;
 	}
@@ -148,7 +148,7 @@ $debug-column-color-lightness: 70%;
 
 	//Lets verify if the trace is on for this context.
 	@if $trace-level != off {
-		
+
 		//We only trace if the minimum level was reached.
 		@if debug-get-trace-level-value($message-type) >= debug-get-trace-level-value($trace-level) {
 
@@ -202,7 +202,7 @@ $debug-column-color-lightness: 70%;
 	@if unit($value-to-convert) == "px" {
 		@return ($value-to-convert / $unitgs-constants-browser-default-text-size * 1em);
 	}
-	
+
 	//Trace and return error.
 	$void: debug-trace("@function convert-to-media-queries-em", "Currently we only support convertions from px to em.", error, "");
 	@return 0;
@@ -224,7 +224,7 @@ $unitgs-settings-default-number-of-active-columns: 24 !default;
 $unitgs-settings-default-base-font-size: 1 !default;
 $unitgs-settings-default-base-line-height: 1.5 !default;
 $unitgs-settings-default-base-gutter-width: 1 !default;
-$unitgs-settings-default-use-last-right-margins: true !default; 
+$unitgs-settings-default-use-last-right-margins: true !default;
 $unitgs-settings-default-use-clear: true !default;
 $unitgs-settings-default-grid-current-scale: 1 !default;
 
@@ -234,7 +234,7 @@ $unitgs-settings-number-of-active-columns:$unitgs-settings-default-number-of-act
 $unitgs-settings-base-font-size: $unitgs-settings-default-base-font-size !default;
 $unitgs-settings-base-line-height: $unitgs-settings-default-base-line-height !default;
 $unitgs-settings-base-gutter-width: $unitgs-settings-default-base-gutter-width !default;
-$unitgs-settings-use-last-right-margins: $unitgs-settings-default-use-last-right-margins !default; 
+$unitgs-settings-use-last-right-margins: $unitgs-settings-default-use-last-right-margins !default;
 $unitgs-settings-use-clear: $unitgs-settings-default-use-clear !default;
 
 //Dont set this property directly use the function set-scale();
@@ -316,32 +316,32 @@ $unitgs-settings-grid-unit-default-height: $unitgs-settings-grid-line-default-he
 	}
 
 	//Set Grid Settings.
-	$unitgs-settings-number-of-columns:			if($number-of-columns == undefined, $unitgs-settings-default-number-of-columns, $number-of-columns);
-	$unitgs-settings-number-of-active-columns:	if($number-of-active-columns == undefined, $unitgs-settings-default-number-of-active-columns, $number-of-active-columns);
-	$unitgs-settings-base-font-size:			if($font-size == undefined, $unitgs-settings-default-base-font-size, $font-size);
-	$unitgs-settings-base-line-height:			if($line-height == undefined, $unitgs-settings-default-base-line-height, $line-height);
-	$unitgs-settings-base-gutter-width:			if($gutter-width == undefined, $unitgs-settings-default-base-gutter-width, $gutter-width);
-	$unitgs-settings-use-last-right-margins:	if($use-last-right-margins == undefined, $unitgs-settings-default-use-last-right-margins, $use-last-right-margins);
-	$unitgs-settings-use-clear:					if($use-clear == undefined, $unitgs-settings-default-use-clear, $use-clear);
+	$unitgs-settings-number-of-columns:			if($number-of-columns == undefined, $unitgs-settings-default-number-of-columns, $number-of-columns) !global;
+	$unitgs-settings-number-of-active-columns:	if($number-of-active-columns == undefined, $unitgs-settings-default-number-of-active-columns, $number-of-active-columns) !global;
+	$unitgs-settings-base-font-size:			if($font-size == undefined, $unitgs-settings-default-base-font-size, $font-size) !global;
+	$unitgs-settings-base-line-height:			if($line-height == undefined, $unitgs-settings-default-base-line-height, $line-height) !global;
+	$unitgs-settings-base-gutter-width:			if($gutter-width == undefined, $unitgs-settings-default-base-gutter-width, $gutter-width) !global;
+	$unitgs-settings-use-last-right-margins:	if($use-last-right-margins == undefined, $unitgs-settings-default-use-last-right-margins, $use-last-right-margins) !global;
+	$unitgs-settings-use-clear:					if($use-clear == undefined, $unitgs-settings-default-use-clear, $use-clear) !global;
 
 	//Lets check if the number of active columns is bigger than the number of columns and correct if necessary.
 	@if debug-assert($unitgs-settings-number-of-active-columns > $unitgs-settings-number-of-columns,
 		"@mixin unitgs-set-grid-settings",
 		"The number of active columns cannot be bigger than the total number of columns. You set the value of the $unitgs-settings-number-of-active-columns with #{$number-of-active-columns} and it was corrected to #{$number-of-columns}.",
 		warning, "") {
-		$unitgs-settings-number-of-active-columns: $unitgs-settings-number-of-columns;
+		$unitgs-settings-number-of-active-columns: $unitgs-settings-number-of-columns !global;
 	}
 
 	//Recalculate Dependent Settings
-	$unitgs-grid-column-size: 100% / $unitgs-settings-number-of-columns;
-	
+	$unitgs-grid-column-size: 100% / $unitgs-settings-number-of-columns !global;
+
 	//Set related default values.
-	$unitgs-settings-grid-line-default-line-height: $unitgs-settings-base-line-height;
-	$unitgs-settings-grid-unit-default-container-width: $unitgs-settings-number-of-active-columns;
-	$unitgs-settings-grid-unit-default-line-height: $unitgs-settings-grid-line-default-line-height;
+	$unitgs-settings-grid-line-default-line-height: $unitgs-settings-base-line-height !global;
+	$unitgs-settings-grid-unit-default-container-width: $unitgs-settings-number-of-active-columns !global;
+	$unitgs-settings-grid-unit-default-line-height: $unitgs-settings-grid-line-default-line-height !global;
 
 	//Lets mark the mixin as executed.
-	$unitgs-control-set-grid-settings-called: true;
+	$unitgs-control-set-grid-settings-called: true !global;
 
 	$void: debug-trace("@mixin unitgs-set-grid-settings",
 		"$unitgs-settings-number-of-columns: #{$unitgs-settings-number-of-columns}"
@@ -362,7 +362,7 @@ $unitgs-settings-grid-unit-default-height: $unitgs-settings-grid-line-default-he
 	$scale:			if($scale == undefined or $scale == default, $unitgs-settings-default-grid-current-scale, $scale);
 	$wrapper-tag:	if($wrapper-tag == undefined or $wrapper-tag == default, $unitgs-settings-default-wrapper-tag, $wrapper-tag);
 
-	$unitgs-settings-grid-current-scale: $scale;
+	$unitgs-settings-grid-current-scale: $scale !global;
 
 	//If it is to wrap, lets wrap.
 	@if $wrapper-tag == none or $wrapper-tag == "" {
@@ -422,7 +422,7 @@ $unitgs-settings-default-wrapper-tag: body !default;
 			border: 0;
 		}
 	}
-	
+
 	@if $wrapper-tag == none or $wrapper-tag == "" {
 		@include unitgs-set-grid-scale($scale, $wrapper-tag: none);
 		line-height: #{$unitgs-settings-base-line-height}em;
@@ -435,7 +435,7 @@ $unitgs-settings-default-wrapper-tag: body !default;
 	}
 
 	//Mark the mixin init grid as executed.
-	$unitgs-control-init-grid-called: true;
+	$unitgs-control-init-grid-called: true !global;
 
 	$void: debug-trace("@mixin unitgs-init-grid",
 		"Setting $scale to #{$scale}"
@@ -459,7 +459,7 @@ $unitgs-settings-default-wrapper-tag: body !default;
 //						You only have to set this for nested grids.
 //		Default: $number-of-active-columns
 //@function grid-fractions-to-columns($grid-fraction, $number-of-columns: $unitgs-settings-number-of-active-columns) {
-//	
+//
 //	@if $grid-fraction >= 1 {
 //		@return $grid-fraction;
 //	}
@@ -554,7 +554,7 @@ $unitgs-settings-default-wrapper-tag: body !default;
 	$grid-fractions, $number-of-columns: $unitgs-settings-number-of-active-columns,
 	$start: 1,
 	$end: length($grid-fractions)) {
-	
+
 	//If the value to calculate is zero we can return it immediatly.
 	@if $grid-fractions == 0 { @return 0; }
 
@@ -569,7 +569,7 @@ $unitgs-settings-default-wrapper-tag: body !default;
 
 	//Go through the list values.
 	@for $i from $start through $end {
-	
+
 		$current-item: nth($grid-fractions, $i);
 
 		//If the current item is a list.
@@ -628,11 +628,11 @@ $unitgs-settings-default-wrapper-tag: body !default;
 	$start: 1,
 	$end: length($grid-fractions)
 	) {
-	
+
 	@if $unitgs-settings-grid-unit-width-resolution-mode == absolute {
 		@return grid-fractions-to-columns-absolute($grid-fractions, $unitgs-settings-number-of-active-columns, $start, $end);
 	} @else {
-		@return grid-fractions-to-columns-relative($grid-fractions, $number-of-columns, $start, $end);	
+		@return grid-fractions-to-columns-relative($grid-fractions, $number-of-columns, $start, $end);
 	}
 }
 
@@ -757,7 +757,7 @@ $unitgs-settings-default-wrapper-tag: body !default;
 	//If the width was set by the user.
 	} @else {
 		//If the width or the font-size specifies more than one dimension we know that is contained.
-		@if (type-of($width) == list and length($width) > 1) or 
+		@if (type-of($width) == list and length($width) > 1) or
 			(type-of($font-size) == list and length($font-size) > 1){
 
 			@if $container-type == none { $container-type: contained; }
@@ -831,7 +831,7 @@ $unitgs-settings-default-wrapper-tag: body !default;
 	//Lets define the margins in the css.
 	margin-left: $column-margin-left;
 	margin-right: $column-margin-right;
-	
+
 	//Lets position the column.
 	@if $float == left { float: left; }
 	@else { float: right; }
@@ -846,9 +846,9 @@ $unitgs-settings-default-wrapper-tag: body !default;
 			$dimensions-ratio: calculate-dimensions-ratio($font-size);
 		}
 
-		padding-left: #{if($gutter == both or $gutter == left, 
+		padding-left: #{if($gutter == both or $gutter == left,
 			$unitgs-settings-base-line-height * $unitgs-settings-base-gutter-width * $dimensions-ratio / 2, 0)}em;
-		padding-right: #{if($gutter == both or $gutter == right, 
+		padding-right: #{if($gutter == both or $gutter == right,
 			$unitgs-settings-base-line-height * $unitgs-settings-base-gutter-width * $dimensions-ratio / 2, 0)}em;
 
 		//Set box sizing to border-box
@@ -859,7 +859,7 @@ $unitgs-settings-default-wrapper-tag: body !default;
 		        box-sizing: border-box;
 	} @else {
 		//Lets force the paddings to get back to 0.
-		padding-left: 0; 
+		padding-left: 0;
 		padding-right: 0;
 	}
 
@@ -946,7 +946,7 @@ $unitgs-settings-default-wrapper-tag: body !default;
 
 	//Lets calculate the font-size in units relative to the font.
 	$calculated-line-height: $calculated-line-height / $font-size;
-	
+
 
 	//Lets set the line-height.
 	@if $single-line-vertical-align == undefined {
