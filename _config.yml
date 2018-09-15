@@ -7,7 +7,7 @@ permalink: /:title
 paginate: 10
 exclude: ["Rakefile", "LICENSE.txt", "CNAME"]
 title: Unit Grid System
-url: http://unit.gs
+url: http://unitgs.bernardoantunes.com
 github_user: bernardoantunes
 navigation:
 - text: Home
